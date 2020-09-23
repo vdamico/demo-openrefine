@@ -18,6 +18,8 @@ WORKDIR /home/workspace/files/openrefine
 # Required for the Workspace integrations
 EXPOSE 8080
 
-ENTRYPOINT ["/app/refine"]
-# Serve on all IPs and port 8080 for Workspace integration
-CMD ["-i", "0.0.0.0", "-p", "8080", "-d", "/home/workspace/files/openrefine/data"]
+
+ADD mini-app /app
+
+ENTRYPOINT /app/mini-app
+

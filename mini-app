@@ -1,0 +1,4 @@
+#!/bin/sh
+
+# Serve on all IPs and port 8080 for Workspace integration
+exec /app/refine -i 0.0.0.0 -p 8080 -d /home/workspace/files/openrefine/data
