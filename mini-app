@@ -1,7 +1,7 @@
 #!/bin/sh
 
 # TODO - Generalise as these are specific to Preview
-export JAVA_OPTIONS="-Djava.useSystemProxies=true -Dhttps.proxyHost=10.0.0.5 -Dhttps.proxyPort=3128"
+export JAVA_OPTIONS="-Djava.useSystemProxies=true -Dhttp.proxyHost=proxy.uksouth.preview.aridhia.io -Dhttp.proxyPort=3128 -Dhttps.proxyHost=proxy.uksouth.preview.aridhia.io -Dhttps.proxyPort=3128"
 
 # Serve on all IPs and port 8080 for Workspace integration
 exec /app/refine -i 0.0.0.0 -p 8080 -d /home/workspace/files/${SHINY_DIR}
