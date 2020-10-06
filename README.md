@@ -11,6 +11,7 @@ For some `0.6` tag of you want to use
 
 Run the image, mounting local folder and mapping local to container ports:
 ```sh
+mkdir -p ./data
 docker run -it -p 8080:8080\
      --volume ./data:/home/workspace\
      openrefine:0.6

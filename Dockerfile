@@ -3,15 +3,14 @@
 FROM openjdk:8-jre-alpine
 LABEL maintainer="rodrigo.barnes@aridhia.com"
 
-# OpenRefine 3.4
-ENV OR_URL https://github.com/OpenRefine/OpenRefine/releases/download/3.4/openrefine-linux-3.4.tar.gz
+# OpenRefine 3.3 is required for the RDF plugin
+ENV OR_URL https://github.com/OpenRefine/OpenRefine/releases/download/3.3/openrefine-linux-3.3.tar.gz
 
 WORKDIR /app
 
 RUN set -xe \
     && apk add --no-cache bash curl grep tar \
     && curl -sSL ${OR_URL} | tar xz --strip 1
-
 
 RUN addgroup -S workspace && adduser -G workspace -D workspace
 RUN su workspace -c "mkdir -p /home/workspace/files"
