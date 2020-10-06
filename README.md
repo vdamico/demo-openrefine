@@ -4,14 +4,18 @@ An experimental demo configuration of [OpenRefine](https://openrefine.org/). The
 
 Build the image:
 ```sh
-docker build . -t openrefine:0.2
+docker build . -t openrefine:0.6
 ```
+
+For some `0.6` tag of you want to use
 
 Run the image, mounting local folder and mapping local to container ports:
 ```sh
-docker run -it -p 8080:8080 --volume ./data:/home/workspace/files/openrefine/data openrefine:0.2
+docker run -it -p 8080:8080\
+     --volume ./data:/home/workspace\
+     openrefine:0.6
 ```
 
 ## Acknowledgements
 
-- The seed Dockerfile came from <https://github.com/opencultureconsulting/openrefine-docker/blob/master/3.4/Dockerfile>
+- The seed Dockerfile came from <https://github.com/OpenRefine/OpenRefine/releases/download/3.3/openrefine-linux-3.3.tar.gz>
