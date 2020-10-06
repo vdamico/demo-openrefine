@@ -19,4 +19,4 @@ docker run -it -p 8080:8080\
 
 ## Acknowledgements
 
-- The seed Dockerfile came from <https://github.com/OpenRefine/OpenRefine/releases/download/3.3/openrefine-linux-3.3.tar.gz>
+- The seed Dockerfile came from <https://github.com/opencultureconsulting/openrefine-docker/blob/master/3.4/Dockerfile>
