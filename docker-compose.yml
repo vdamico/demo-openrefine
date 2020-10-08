@@ -1,0 +1,12 @@
+version: '3.3'
+
+services:
+  demo-openrefine:
+    build: .
+    container_name: demo-openrefine
+    ports:
+      - 8080:8080
+    volumes:
+      - ./data:/data/
+      - ./extensions:/data/extensions/
+      - ./cache:/data/cache/
