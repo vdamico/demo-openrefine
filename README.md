@@ -4,17 +4,19 @@ An experimental demo configuration of [OpenRefine](https://openrefine.org/). The
 
 Build the image:
 ```sh
-docker build . -t openrefine:0.6
+docker build . -t openrefine:0.8
 ```
 
-For some `0.6` tag of you want to use
+For some `0.8` tag of you want to use
 
 Run the image, mounting local folder and mapping local to container ports:
 ```sh
 mkdir -p ./data
 docker run -it -p 8080:8080\
-     --volume ./data:/home/workspace\
-     openrefine:0.6
+     --volume ./data:/data\
+     --volume ./extensions:/data/extensions\
+     --volume ./cache:/data/cache\
+     openrefine:0.8
 ```
 
 ## Acknowledgements
